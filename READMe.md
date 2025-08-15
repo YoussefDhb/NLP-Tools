@@ -1,14 +1,14 @@
 # NLP Tools
 
-All-in-one workspace for common NLP tasks: Sentiment Analysis, Named Entity Recognition, Question Answering, Abstractive Summarization, and Resume Screening. The repo includes ready-to-run Jupyter notebooks and Streamlit apps.
+All-in-one workspace for common NLP tasks: Sentiment Analysis, Named Entity Recognition, Question Answering, Abstractive Summarization, and Resume Screening.
 
 ## What’s inside
 
-- Sentiment Analysis — classic ML (scikit-learn) pipeline and notebook.
+- Sentiment Analysis — ML pipeline and notebook.
 - Named Entity Recognition — spaCy-based NER with rule-based additions.
 - Question Answering — Transformers QA models over custom context.
-- Summarizer — BART/T5 style abstractive summarization with optional chunking and a Streamlit app.
-- Resume Screening — Embedding-based ranking of resumes vs. job descriptions, skill extraction, and a Streamlit app.
+- Summarizer — BART/T5 style abstractive summarization.
+- Resume Screening — Embedding-based ranking of resumes vs. job descriptions, skill extraction.
 
 ## Project structure
 
@@ -65,7 +65,7 @@ You can install everything globally or in a virtual environment.
 - Sentiment Analysis
     - Clean & preprocess text (lowercasing, URL/punctuation/number removal, stopwords)
     - Optional **lemmatization** (spaCy preferred; fallback to NLTK WordNet)
-    - Text → **TF‑IDF** (default) or **CountVectorizer**
+    - Text → **TF‑IDF** or **CountVectorizer**
     - Train **Logistic Regression** and **Multinomial Naive Bayes** (compare accuracy)
     - **Evaluation**: accuracy, classification report, confusion matrix
     - **Visualizations**: most frequent **positive/negative** words (bar charts) + **word clouds**
@@ -79,7 +79,7 @@ You can install everything globally or in a virtual environment.
     - Simple interactive interfaces: CLI and Streamlit examples.
 
 - Summarization
-    - Load **CNN/DailyMail** (Kaggle) or your own CSV (`text`, `summary`)
+    - Load **CNN/DailyMail** or your own CSV (`text`, `summary`)
     - **Abstractive** summarization with Hugging Face Transformers (BART/T5/Pegasus; picks the first two available)
     - Long-text handling: **truncate** to model limits and optional **chunk-and-merge** pipeline
     - **ROUGE** evaluation (ROUGE-1/2/L via `rouge-score`)
